@@ -1,0 +1,32 @@
+#ifndef LIBND4J_CONFIG_H
+#define LIBND4J_CONFIG_H
+
+#cmakedefine HAVE_ONEDNN
+
+#cmakedefine HAVE_VEDNN
+
+#cmakedefine HAVE_VEDA
+
+#cmakedefine SD_LIBRARY_NAME "@SD_LIBRARY_NAME@"
+
+#if defined(HAVE_VEDA)
+#define VEDA_VEDNN_LIBRARY "lib" SD_LIBRARY_NAME "_device.vso"
+#endif
+
+#cmakedefine HAVE_ARMCOMPUTE
+
+#cmakedefine ONEDNN_PATH "@ONEDNN_PATH@"
+
+#cmakedefine HAVE_OPENBLAS
+
+#cmakedefine OPENBLAS_PATH "@OPENBLAS_PATH@"
+
+#cmakedefine HAVE_FLATBUFFERS
+
+#cmakedefine FLATBUFFERS_PATH "@FLATBUFFERS_PATH@"
+
+#cmakedefine HAVE_CUDNN
+
+#cmakedefine DEFAULT_ENGINE @DEFAULT_ENGINE@
+
+#endif

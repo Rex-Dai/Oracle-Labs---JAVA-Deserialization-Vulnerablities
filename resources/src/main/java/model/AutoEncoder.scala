@@ -70,7 +70,7 @@ class AutoEncoder {
 
 
   while(tranIter.hasNext()){
-    val next = iter.next()
+    val next = trainIter.next()
     val split = next.splitTestAndTrain(8, 2)  //8/2 split (from miniBatch = 10)
     featuresTrain.add(split.getTrain().getFeatures())
     val dsTest = split.getTest()
